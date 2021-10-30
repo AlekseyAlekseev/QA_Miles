@@ -3,12 +3,13 @@ package ru.netology;
 public class Main {
     public static void main(String[] args) {
 
-        int ticketPrice = 250; // Стоимость билета
+        BonusMilesService service = new BonusMilesService();
+        int ticketPrice = 10000; // Стоимость билета
 
-        int mileCost = 20; // Рублей за одну бонусную милю
+        int miles = service.calculate(ticketPrice);
 
-        int calculationByMile = ticketPrice / mileCost; // Расчет миль за покупку билета
 
-        System.out.println("\nCпасибо за покупку!\n\nНакоплено миль: " + calculationByMile);
+
+        System.out.println("\nCпасибо за покупку!\n\nНакоплено миль: " + miles);
     }
 }
